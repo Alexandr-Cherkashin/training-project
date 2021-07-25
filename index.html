@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang=zxx>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" type="image/svg" href="./img/icon/favicon.svg">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+        <title>Travel Agency</title>
+    </head>
+    <body>
+        <!--SPRITE-->
+        <svg style="display: none;">
+            <symbol id="facebook" viewBox="0 0 512 512">
+                <g><path d="m437 0h-362c-41.351562 0-75 33.648438-75 75v362c0 41.351562 33.648438 75 75 75h151v-181h-60v-90h60v-61c0-49.628906 40.371094-90 90-90h91v90h-91v61h91l-15 90h-76v181h121c41.351562 0 75-33.648438 75-75v-362c0-41.351562-33.648438-75-75-75zm0 0"/>
+                </g>
+            </symbol>
+
+            <symbol id="instagram" viewBox="0 0 94 94">
+                <g>
+                    <path d="M64.748,32.155h8.781c1.923,0,3.496-1.574,3.496-3.498v-8.371c0-1.925-1.573-3.498-3.496-3.498h-8.781
+                        c-1.924,0-3.497,1.573-3.497,3.498v8.371C61.251,30.581,62.824,32.155,64.748,32.155z"/>
+                    <ellipse cx="47.074" cy="46.831" rx="15.602" ry="15.117"/>
+                    <path d="M89,0H5C2.239,0,0,2.239,0,5v84c0,2.761,2.239,5,5,5h84c2.762,0,5-2.239,5-5V5C94,2.239,91.762,0,89,0z M85.843,75.872
+                        c0,5.911-4.487,9.971-9.971,9.971H18.128c-5.484,0-9.971-4.06-9.971-9.971V18.128c0-5.911,4.486-9.971,9.971-9.971h57.744
+                        c5.483,0,9.971,4.06,9.971,9.971V75.872z"/>
+                    <path d="M71.221,47.676c0,12.922-10.812,23.396-24.146,23.396c-13.336,0-24.147-10.475-24.147-23.396
+                        c0-2.316,0.35-4.553,0.997-6.666h-7.136v32.815c0,1.698,1.391,3.088,3.089,3.088h54.099c1.697,0,3.088-1.39,3.088-3.088V41.01
+                        h-6.838C70.871,43.123,71.221,45.359,71.221,47.676z"/>
+                </g>
+            </symbol>
+
+            <symbol id="vk" viewBox="0 0 94 94">
+                <path d="M89,0H5C2.238,0,0,2.239,0,5v84c0,2.761,2.238,5,5,5h84c2.762,0,5-2.239,5-5V5C94,2.239,91.762,0,89,0z M74.869,52.943
+		c2.562,2.5,5.271,4.854,7.572,7.617c1.018,1.22,1.978,2.48,2.709,3.899c1.041,2.024,0.101,4.247-1.713,4.366l-11.256-0.003
+		c-2.906,0.239-5.22-0.931-7.172-2.918c-1.555-1.585-3.001-3.277-4.5-4.914c-0.611-0.673-1.259-1.306-2.025-1.806
+		c-1.534-0.996-2.867-0.692-3.748,0.909c-0.896,1.63-1.103,3.438-1.185,5.255c-0.125,2.655-0.925,3.348-3.588,3.471
+		c-5.69,0.268-11.091-0.596-16.108-3.463c-4.429-2.53-7.854-6.104-10.838-10.146c-5.816-7.883-10.27-16.536-14.27-25.437
+		c-0.901-2.005-0.242-3.078,1.967-3.119c3.676-0.073,7.351-0.063,11.022-0.004c1.496,0.023,2.485,0.879,3.058,2.289
+		c1.985,4.885,4.421,9.533,7.471,13.843c0.813,1.147,1.643,2.292,2.823,3.103c1.304,0.896,2.298,0.601,2.913-0.854
+		c0.393-0.928,0.563-1.914,0.647-2.906c0.292-3.396,0.327-6.792-0.177-10.175c-0.315-2.116-1.507-3.483-3.617-3.883
+		c-1.074-0.204-0.917-0.602-0.395-1.215c0.906-1.062,1.76-1.718,3.456-1.718l12.721-0.002c2.006,0.392,2.452,1.292,2.725,3.311
+		l0.012,14.133c-0.021,0.782,0.391,3.098,1.795,3.61c1.123,0.371,1.868-0.53,2.54-1.244c3.048-3.235,5.22-7.056,7.167-11.009
+		c0.857-1.743,1.6-3.549,2.32-5.356c0.533-1.337,1.367-1.995,2.875-1.971l12.246,0.013c0.36,0,0.729,0.004,1.086,0.063
+		c2.062,0.355,2.627,1.243,1.99,3.257c-1.004,3.163-2.959,5.799-4.871,8.441c-2.043,2.825-4.224,5.557-6.252,8.396
+		C72.411,49.38,72.561,50.688,74.869,52.943z"/>
+            </symbol>
+
+            <symbol id="brand-logo" viewBox="0 0 80.66 80.66">
+                <path d="M0,0V80.66H80.66V0ZM79.66,79.66h-3.1l-.44-.76A57,57,0,0,1,69.31,72c-.68-.68-4.51-5.79-4.51-5.79H60.88L60,62.05l1.62-2-5-3a2.36,2.36,0,0,1,.8-.5c.51-.17.76-.45,1.27-1.11s1-1,.83-1.29-.19-.45-.44-.51a11.86,11.86,0,0,0-2.05.89c-.51.19-.38.51-1.47.45a7.57,7.57,0,0,1-2.48-.83,19.57,19.57,0,0,1-2.49-4.79L50.52,49,53.75,26.1,55.2,25l.58-1.6-.51-.7-1.09.41.76-5.38-.59-.09-.81,5.71-1.47.56L49.2,25.65l-2.55.25-2-2.17-1.09-1.91a8.29,8.29,0,0,0-.76-1.53c-.19-.13-1.53-.77-1.53-.77l-.19-1.21A1.54,1.54,0,0,0,42.18,18a3.87,3.87,0,0,0,.64-1.34l.45-.38s-.58-1.34-.32-1.54a10.1,10.1,0,0,1,2-.38l.89-.38-.32-.64L43.39,13s-.57-1-1-1.15-.19.25-.44-.13a6.6,6.6,0,0,0-1.66-1l-2.88.57-.76,1.92V15l-1.09.32-1,.7s-.25-1.4-.95-1.79-1.47-1-2.17-.83a6.28,6.28,0,0,0-2.49,1c-.13.32-1.41,1.35-1.41,1.73v3.64s-.44,1.53,0,1.66.39.38.39.7-1.41,1.4-1.41,1.4L26,25s.38,1.66,0,1.85a3.29,3.29,0,0,0-1,1.21c-.06.19,0,2.94,0,2.94l1.6.76,1,.83s-.25,1.6-.57,1.6-.77.32-.64.7.7,2.94.7,2.94a9.59,9.59,0,0,0,1.92,1.15c.44.06,2,.38,2.68.51a2.44,2.44,0,0,0,1.27-.13s-.11.51-.21,1.06L15,67l.5.33L32.67,41.69c.07.33.19,3.05.19,3.24S32.61,48,32.61,48l-.77,1.72-1.79,2.88-.7,2.74-1,2a17.52,17.52,0,0,1-1.15,2.49,1.35,1.35,0,0,0-1,1c-.19.77-.44,1.21-.19,1.59s1.66.71,2,.9c.15.09.36.19.56.29l-1.47.33-3.58-.86s-3.74,1.23-3.83,1.56S18,70.05,18,70.05l-4.6.09.6,5.45L9.82,74.9,6.93,77.29,3.35,77v2.71H1V1H79.66Zm-41-38.44a14.12,14.12,0,0,1,2,1.19l2.37.92,2.1.89s.71,2.56.71,2.75a18.62,18.62,0,0,0,1.72,3.76c.22.23,1.06,1.37,1.84,2.48l-.77,5.51.59.08.69-4.89,1.05,1.5c0,2,0,2,1,2,.35,0,.69,0,1,0l-12.6,7.26V61l-8.6,1.89a10.37,10.37,0,0,0-1.25-1.53A1.41,1.41,0,0,1,30,59.73a29.2,29.2,0,0,1,2.23-3.83,35.51,35.51,0,0,0,2.68-3.44,31,31,0,0,0,2-3.13c.07-.45,1.22-6.92,1.22-6.92S37.86,40.9,38.62,41.22Zm2-5.29V28.65c0-.19.81-.83,1.3-1.53s.17-2,.94-1a7.22,7.22,0,0,0,2,1.79,21.24,21.24,0,0,0,2,.89l3.7-1.91,1.15-.64,1.5-.1-3,21.61a20.68,20.68,0,0,1-.89-2c-.06-.51-.32-3.41-.32-3.41s-6.66-5.34-7-5.59S40.58,36.12,40.58,35.93Z"/>
+            </symbol>
+        </svg>
+    <div class="page">
+        <!--header-->
+        <header class="header">
+            <div class="container">
+                <div class="header__inner">
+                    <div class="header__brand">
+                        <svg class="brand-logo">
+                            <use xlink:href="#brand-logo"></use>
+                        </svg>
+                        <p class="company__name"><span>travel</span> <br>agency</p>
+                    </div>
+                    <div class="social">
+                        <a class="social__mail" href="mailto:travel-agency@info.com">travel-agency@info.com</a>
+
+                        <a class="social__link" href="#" target="_blank">
+                            <svg class="social__icon">
+                                <use xlink:href="#facebook"></use>
+                            </svg>
+                        </a>
+                        
+                        <a class="social__link" href="#" target="_blank">
+                            <svg class="social__icon">
+                                <use xlink:href="#instagram"></use>
+                            </svg>
+                        </a>
+                        
+                        <a class="social__link" href="#" target="_blank">
+                            <svg class="social__icon">
+                                <use xlink:href="#vk"></use>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="navigation white">
+                <div class="container burger__container">
+                    <div class="nav">
+                        <nav>
+                            <a class="nav__link" href="#">home</a>
+                            <a class="nav__link" href="#routes">routes</a>
+                            <a class="nav__link" href="#news">news</a>
+                            <a class="nav__link" href="#">about</a>
+                            <a class="nav__link" href="#location">location</a>
+                            <a class="nav__link" href="#contacts">contacts</a>
+                        </nav>
+
+                        <div class="social__scroll">
+                            <a class="social__mail" href="mailto:travel-agency@info.com">travel-agency@info.com</a>
+    
+                            <a class="social__link" href="#" target="_blank">
+                                <svg class="social__icon">
+                                    <use xlink:href="#facebook"></use>
+                                </svg>
+                            </a>
+                            
+                            <a class="social__link" href="#" target="_blank">
+                                <svg class="social__icon">
+                                    <use xlink:href="#instagram"></use>
+                                </svg>
+                            </a>
+                            
+                            <a class="social__link" href="#" target="_blank">
+                                <svg class="social__icon">
+                                    <use xlink:href="#vk"></use>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="burger">
+                        <button class="burger__btn" type="button">
+                            <span class="burger__item">menu</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="burger__menu">
+                <nav class="burger__list">
+                    <a class="burger__link" href="#">home</a>
+                    <a class="burger__link" href="#routes">routes</a>
+                    <a class="burger__link" href="#news">news</a>
+                    <a class="burger__link" href="#">about</a>
+                    <a class="burger__link" href="#location">location</a>
+                    <a class="burger__link" href="#contacts">contacts</a>
+                </nav>
+            </div>
+        </header>
+        
+
+        <!--routes-->
+        <section>
+            <h1 id="routes">Lorem ipsum dolor sit, amet consectetur adipisicing elit.<br>Molestias, dignissimos?</h1>
+            
+            <div class="container">
+                <div class="routes">
+                    <div class="routes__item">
+                        <video poster="./img/preview1.png" loop muted controls>
+                            <source src="./video/1.mp4" type="video/mp4">
+                        </video>
+                        <div class="routes__text">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae vitae nihil quibusdam vel, facere hic doloremque necessitatibus eos voluptates a, suscipit laborum, nemo voluptas! Molestias odit enim eligendi voluptatum repellendus mollitia magni sed distinctio fugiat numquam, nobis est? Facere, ea!</p>
+                        </div>
+                        <div class="button">
+                            <button class="btn" type="button">sign up</button>
+                        </div>
+                    </div>
+                    <div class="routes__item">
+                        <video poster="./img/preview2.png" loop muted controls>
+                            <source src="./video/2.mp4" type="video/mp4">
+                        </video>
+                        <div class="routes__text">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae vitae nihil quibusdam vel, facere hic doloremque necessitatibus eos voluptates a, suscipit laborum, nemo voluptas! </p>
+                        </div>
+                        <div class="button">
+                            <button class="btn" type="button">sign up</button>
+                        </div>
+    
+                    </div>
+                    <div class="routes__item">
+                        <video poster="./img/preview3.png" loop muted controls>
+                            <source src="./video/3.mp4" type="video/mp4">
+                        </video>
+                        <div class="routes__text">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae vitae nihil quibusdam vel, facere hic doloremque necessitatibus eos voluptates a, suscipit laborum, nemo voluptas! Molestias odit enim eligendi voluptatum repellendus mollitia magni sed distinctio fugiat numquam.</p>
+                        </div>
+                        <div class="button">
+                            <button class="btn" type="button">sign up</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--guid-->
+        <section>
+            <div class="container">
+                <h1 class="section__title">Lorem ipsum dolor sit, amet consectetur adipisicing elit. <br>Molestias, dignissimos?</h1>
+                <div class="guid">
+                    <div class="guid__item guid__item1">
+                        <a class="guid__link" href="#">
+                        <img class="guid__photo" src="./img/guid/guid__item1.png" alt="">
+                        <div class="guid__item-content">
+                            <div class="guid__item-text"> <p>Adipisicing elit </p>
+                            </div>
+                        </div>
+                        </a>
+                    </div>
+
+                    <div class="guid__item guid__item2">
+                        <a class="guid__link" href="#">
+                        <img class="guid__photo" src="img/guid/guid__item2.png" alt="">
+                        <div class="guid__item-content">
+                            <div class="guid__item-text"> <p>Adipisicing elit </p>
+                            </div>
+                        </div>
+                        </a>
+                    </div>
+
+                        <div class="guid__item guid__item3">
+                        <a class="guid__link" href="#">
+                        <img class="guid__photo" src="img/guid/guid__item3.png" alt="">
+                        <div class="guid__item-content">
+                            <div class="guid__item-text"> <p>Adipisicing elit </p>
+                            </div>
+                        </div>
+                        </a>
+                    </div>
+
+                        <div class="guid__item guid__item4">
+                        <a class="guid__link" href="#">
+                        <img class="guid__photo" src="img/guid/guid__item4.png" alt="">
+                        <div class="guid__item-content">
+                            <div class="guid__item-text"> <p>Adipisicing elit </p>
+                            </div>
+                        </div>
+                        </a>
+                    </div>
+
+                    <div class="guid__item guid__item5">
+                        <a class="guid__link" href="#">
+                        <img class="guid__photo" src="img/guid/guid__item5.png" alt="">
+                        <div class="guid__item-content">
+                            <div class="guid__item-text"> <p>Adipisicing elit </p>
+                            </div>
+                        </div>
+                        </a>
+                    </div>
+
+                        <div class="guid__item guid__item6">
+                        <a class="guid__link" href="#">
+                        <img class="guid__photo" src="img/guid/guid__item6.png" alt="">
+                        <div class="guid__item-content">
+                            <div class="guid__item-text"> <p>Adipisicing elit </p>
+                            </div>
+                        </div>
+                        </a>
+                    </div>
+
+                        <div class="guid__item guid__item7">
+                        <a class="guid__link" href="#">
+                        <img class="guid__photo" src="img/guid/guid__item7.png" alt="">
+                        <div class="guid__item-content">
+                            <div class="guid__item-text"> <p>Adipisicing elit </p>
+                            </div>
+                        </div>
+                        </a>
+                    </div>
+
+                </div>
+            </div><!--/container-->
+        </section>
+        <!--news-->
+        <section>
+            <div class="container">
+                <h1 class="section__title" id="news">Lorem ipsum dolor sit.</h1>
+                <div class="news">
+                    <div class="news__content" id="tab_1">
+                        <div class="news__photo">
+                            <img class="news_img" src="./img/news/news1.jpg" alt="news-photo">
+                        </div>
+                        <div class="news__text">
+                            <h2 class="news__text-title">skiing festival</h2>
+                            <h3 class="news__text__subtitle">Sport</h3>
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde, dicta.</p> 
+                            <p><b>Lorem ipsum dolor sit amet.</b></p>
+                            <a class="continuation" href="#">read more > </a>
+                        </div>
+                    </div> 
+                    
+                    <div class="news__content" id="tab_2">
+                        <div class="news__photo">
+                            <img class="news_img" src="./img/news/news2.jpg" alt="news-photo">
+                        </div>
+                        <div class="news__text">
+                            <h2 class="news__text-title">hiking in the mountains</h2>
+                            <h3 class="news__text__subtitle">Tourism</h3>
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde, dicta.<br>Sit amet consectetur adipisicing elit.<br> Necessitatibus earum soluta ex voluptatem, non nobis. </p> 
+                            <p><b>Lorem ipsum dolor sit amet consectetur adipisicing elit.</b></p>
+                            <a class="continuation" href="#">read more > </a>
+                        </div>
+                    </div> 
+                    
+                    <div class="news__content" id="tab_3">
+                        <div class="news__photo">
+                            <img class="news_img" src="./img/news/news3.jpg" alt="news-photo">
+                        </div>
+                        <div class="news__text">
+                            <h2 class="news__text-title">bushcraft for 2 weeks</h2>
+                            <h3 class="news__text__subtitle">Ecotourism</h3>
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde, dicta.</p> 
+                            <p><b>Lorem ipsum dolor sit amet consectetur adipisicing elit. </b></p>
+                            <a class="continuation" href="#">read more > </a>
+                        </div>
+                    </div>
+                    
+                    <div class="news__content" id="tab_4">
+                        <div class="news__photo">
+                            <img class="news_img" src="./img/news/news4.jpg" alt="news-photo">
+                        </div>
+                        <div class="news__text">
+                            <h2 class="news__text-title">tour to asia</h2>
+                            <h3 class="news__text__subtitle">Ecotourism</h3>
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde, dicta.</p> 
+                            <p><b>Sit amet consectetur adipisicing elit.<br> Facere natus eaque eius debitis.</b></p>
+                            <a class="continuation" href="#">read more > </a>
+                        </div>
+                    </div>
+                    
+                    <div class="news__list">
+                        <div class="news__list-item" data-tab="#tab_1">
+                            <time class="news__time" datetime="2020-12-14 13:42">Yesterday 13:42
+                            </time> <p>Winter festivals in Europe <br>3 days in December</p>
+                        </div>
+                        <div class="news__list-item" data-tab="#tab_2">
+                            <time class="news__time" datetime="2020-12-14 12:34">Friday 9:34
+                            </time> <p>Mount Rainier National Park, Washington</p>
+                        </div>
+                        <div class="news__list-item"  data-tab="#tab_3">
+                            <time class="news__time" datetime="2020-12-14 11:46">Saturerday 11:46
+                            </time> <p>Camino Primitivo, Camino de Santiago</p>
+                        </div>
+                        <div class="news__list-item"  data-tab="#tab_4">
+                            <time class="news__time" datetime="2020-12-14 19:21">Sunday 19:21
+                            </time> <p>Start in Canggu and end in Padangbai!</p>
+                        </div>
+                    </div>
+                </div>
+                <!--news__slider-->
+                <div class="container">
+                    <div class="news__slider">
+                        <div class="slider">
+                            <input class="input__slider" type="radio" name="r" id="r1" checked>
+                            <input class="input__slider" type="radio" name="r" id="r2">
+                            <input class="input__slider" type="radio" name="r" id="r3">
+                            <input class="input__slider" type="radio" name="r" id="r4">
+                            
+                            
+                            <div class="slide s1">
+                                <a class="slider__link" href="#">
+                                <img src="./img/news/news1.jpg" alt="">
+                                    <p>skiing festival</p>
+                                </a>
+                            </div>
+
+                            <div class="slide">
+                                <a class="slider__link" href="#">
+                                <img src="./img/news/news2.jpg" alt="">
+                                    <p>hiking in the mountains</p>
+                                </a>
+                            </div>
+
+                            <div class="slide">
+                                <a class="slider__link" href="#">
+                                <img src="./img/news/news3.jpg" alt="">
+                                    <p>BUSHCRAFT FOR 2 WEEKS</p>
+                                </a>
+                            </div>
+
+                            <div class="slide">
+                                <a class="slider__link" href="#">
+                                <img src="./img/news/news4.jpg" alt="">
+                                    <p>TOUR TO ASIA</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slider__navigation">
+                        <label class="slider__bar" for="r1"></label>
+                        <label class="slider__bar" for="r2"></label>
+                        <label class="slider__bar" for="r3"></label>
+                        <label class="slider__bar" for="r4"></label>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+
+        <div class="lake">
+            <div class="lake__title">
+                <p>Lake Tahoe</p>
+                <a class="lake__btn" href="#">
+                    More details
+                </a>
+            </div>  
+        </div>
+
+        <div class="feed__back" id="contacts">
+            <div class="feed__back-inner">
+                <h1 class="form__title">Contact us</h1>
+                <div class="form">
+                    <form action="/" method="POST" class="form">
+                        <div class="form__group">
+                            <input class="form__input" type="text" name="name" placeholder="Name">
+                        </div>
+                        
+                        <div class="form__group">
+                            <input class="form__input" type="tel" name="tel" placeholder="Phone">
+                        </div>
+                        
+                        <div class="form__group">
+                            <input class="form__input" type="email" name="email" placeholder="Email">
+                        </div> 
+                        
+                        <div class="form__group">
+                            <textarea class="form__text" name="text" placeholder="Message"></textarea>
+                        </div>
+                        
+                        <div class="form__btn">
+                            <button class="submit-btn" type="submit">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div><!--/feed__back-->
+        <div class="location" id="location">
+            <div class="container">
+                <h1 class="section__title" id="news">How to find us?</h1>
+                <div class="map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2197.828923719758!2d-122.41033291577479!3d37.78044825246602!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085808464c5e1c1%3A0x185e8a24940d1c90!2sTravel%20Agency!5e0!3m2!1sru!2sru!4v1626631240390!5m2!1sru!2sru" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__inner">
+                    <div class="social__footer">
+                            <a class="social__link social__link-footer" href="#" target="_blank">
+                                <svg class="social__icon icon__footer">
+                                    <use xlink:href="#facebook"></use>
+                                </svg>
+                            </a>
+                            
+                            <a class="social__link social__link-footer" href="#" target="_blank">
+                                <svg class="social__icon icon__footer">
+                                    <use xlink:href="#instagram"></use>
+                                </svg>
+                            </a>
+                            
+                            <a class="social__link social__link-footer" href="#" target="_blank">
+                                <svg class="social__icon icon__footer">
+                                    <use xlink:href="#vk"></use>
+                                </svg>
+                            </a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright"> Copyright 2021. All rights Reserved </div>
+        </footer>
+    </div><!--/page-->
+    <script src="app.js"></script>
+    </body>
+</html>
