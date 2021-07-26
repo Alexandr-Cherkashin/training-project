@@ -239,7 +239,7 @@ h1 {
 
 section:nth-child(2){
     height: auto;
-    background-image: url(./img/section-bg.jpg);
+    background-image: url(./img/section-bg.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -717,7 +717,7 @@ section:nth-child(4) {
 ============================*/
 
 .lake {
-    background-image: url(./img/section-bg2.jpg);
+    background-image: url(./img/section-bg2.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
