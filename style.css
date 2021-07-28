@@ -184,6 +184,7 @@ p {
     align-items: center;
 }
 
+
 .nav__link {
     font-size: 1.2rem;
     text-transform: uppercase;
@@ -933,6 +934,7 @@ section:nth-child(4) {
     font-size: 0;
     padding: 1rem 0;
     cursor: pointer;
+    overflow: hidden;
 }
 
 .burger__item {
@@ -946,7 +948,8 @@ section:nth-child(4) {
 }
 
 .burger__item.active {
-    background-color: transparent;
+    height: 5px;
+    background-color: #fff;
 }
 
 .burger__item::before,
@@ -958,7 +961,7 @@ section:nth-child(4) {
     border-radius: 3px;
     position: absolute;
     left: 0;
-    transition:all .2s linear;
+    transition:all .1s linear;
 }
 
 
@@ -967,8 +970,7 @@ section:nth-child(4) {
 }
 
 .burger__item.active::before{
-    top: 0;
-    transform: rotate(45deg);
+    transform: translateX(-110%);
 }
 
 .burger__item::after{
@@ -976,8 +978,7 @@ section:nth-child(4) {
 }
 
 .burger__item.active::after{
-    transform: rotate(-45deg);
-    bottom: 0;
+    transform: translateX(110%);
 }
 
 .burger__menu{
