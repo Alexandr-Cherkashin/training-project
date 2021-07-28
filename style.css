@@ -162,7 +162,6 @@ p {
 
 .navigation.white {
     padding: .5em 0;
-    background-color: rgb(6, 160, 160);
     transition: All 1s linear;
 }
 
@@ -941,14 +940,14 @@ section:nth-child(4) {
     display: block;
     background-color: #fff;
     border-radius: 3px;
-    height: 3px;
+    height: 2px;
     width: 30px;
     position: relative;
     transition:all .2s linear;
 }
 
 .burger__item.active {
-    height: 5px;
+    height: 4px;
     background-color: #fff;
 }
 
@@ -956,7 +955,7 @@ section:nth-child(4) {
 .burger__item::after{
     content: "";
     width: 100%;
-    height: 3px;
+    height: 2px;
     background-color: #fff;
     border-radius: 3px;
     position: absolute;
